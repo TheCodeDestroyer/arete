@@ -1,0 +1,14 @@
+{
+  "name": "arete",
+  "version": "0.6.0",
+  "description": "Workout planner mobile application",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheCodeDestroyer/arete.git"
+  },
+  "author": "The Code Destroyer <the.code.destroyer@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/TheCodeDestroyer/arete/issues"
+  },
+  "homepage": "https://github.com/TheCodeDestroyer/arete"
+}
