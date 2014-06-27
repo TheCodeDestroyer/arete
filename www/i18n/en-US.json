@@ -1,0 +1,29 @@
+﻿{
+    "general":
+    {
+        "OK": "OK",
+        "CANCEL": "Cancel",
+        "BACK": "Back",
+        "SELECT": "Select",
+        "ADD": "Add",
+        "NEW": "New",
+        "OPEN": "Open",
+        "SEARCH": "Search",
+        "CLEAR": "Clear",
+        "ERROR_TITLE": "Error",
+        "ERROR_MESSAGE": "There was an error. Please contact technical support.",
+        "days":{
+            "1":"Monday",
+            "2":"Tuesday",
+            "3":"Wednesday",
+            "4":"Thursday",
+            "5":"Friday",
+            "6":"Saturday",
+            "7":"Sunday"
+        },
+        "languages":{
+            "ENGLISH": "English",
+            "SLOVENIAN": "Slovenian"
+        }
+    }
+}

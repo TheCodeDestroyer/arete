@@ -13,5 +13,19 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "ionic": "~0.9.27",
+    "ngCordova": "~0.1.2-alpha",
+    "angular-translate": "~2.2.0",
+    "angular-translate-storage-local": "~2.2.0",
+    "angular-translate-storage-cookie": "~2.2.0",
+    "angular-translate-loader-static-files": "~2.2.0",
+    "persistence": "~0.3.0",
+    "angular-cookies": "~1.2.18",
+    "angular-i18n": "~1.2.18"
+  },
+  "resolutions": {
+    "angular": "1.2.12"
+  }
 }

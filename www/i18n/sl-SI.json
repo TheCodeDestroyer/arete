@@ -1,0 +1,20 @@
+﻿{
+    "general":
+    {
+        "OK": "OK",
+        "CANCEL": "Prekliči",
+        "BACK": "Nazaj",
+        "SELECT": "Select",
+        "ADD": "Dodaj",
+        "NEW": "Now",
+        "OPEN": "Odpri",
+        "SEARCH": "Išči",
+        "CLEAR": "Zbriši",
+        "ERROR_TITLE": "Napaka",
+        "ERROR_MESSAGE": "Zgodila se je napaka. Prosim kontaktiraj tehnično pomoč.",
+        "languages":{
+            "ENGLISH": "angleško",
+            "SLOVENIAN": "slovensko"
+        }
+    }
+}
