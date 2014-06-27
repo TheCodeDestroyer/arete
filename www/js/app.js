@@ -4,8 +4,7 @@ angular.module('arete.directives', []);
 angular.module('arete.controllers', []);
 
 angular.module('arete', [
-//    'ionic',
-    'ui.router',
+    'ionic',
     'ngCookies',
     'ngCordova',
     'pascalprecht.translate',
@@ -41,7 +40,4 @@ angular.module('arete', [
 }]).
     run(['$rootScope', function($rootScope){
         'use strict';
-
-        $rootScope.$on('$routeChangeStart', function(event, next) {
-        });
     }]);
