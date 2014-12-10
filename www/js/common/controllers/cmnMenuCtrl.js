@@ -2,8 +2,8 @@ angular.module('arete.controllers').controller('cmnMenuCtrl', ['$scope', '$ionic
     'use strict';
 
     $scope.menuItems = [
-        { displayName: 'Premium', state: '', icon: '' },
-        { displayName: 'Settings', state: '', icon: '' }
+        { displayName: 'Premium', state: 'index.home', icon: '' },
+        { displayName: 'Settings', state: 'index.home', icon: '' }
     ];
 
     $scope.toggleLeft = function() {

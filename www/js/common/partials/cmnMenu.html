@@ -8,7 +8,7 @@
             <button ng-hide="$exposeAside.active" class="button button-icon button-clear ion-navicon" ng-click="toggleLeft()">
             </button>
         </ion-nav-buttons>
-        <ion-nav-view animation="no-animation" name="menuContent"></ion-nav-view>
+        <ion-nav-view animation="no-animation" name="content"></ion-nav-view>
     </ion-side-menu-content>
 
     <ion-side-menu expose-aside-when="large" side="left">
@@ -17,7 +17,7 @@
         </ion-header-bar>
         <ion-content>
             <div class="list ba-list">
-                <a menu-close ng-repeat="menuItem in menuItems" class="item" ui-sref="menuItem.state">
+                <a menu-close ng-repeat="menuItem in menuItems" class="item" ui-sref="{{ menuItem.state }}">
                     {{ menuItem.displayName }}
                 </a>
             </div>
