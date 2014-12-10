@@ -6,7 +6,7 @@ angular.module('arete.controllers', []);
 angular.module('arete', [
     'ionic',
     'pascalprecht.translate',
-    'ngStorage',
+    'angularLocalStorage',
     'ngCordova',
     'ionic',
     'arete.filters',
@@ -23,7 +23,7 @@ angular.module('arete', [
         suffix: '.json'
     });
 
-    $urlRouterProvider.otherwise('/index/home');
+    //$urlRouterProvider.otherwise('/index/home');
 
     $stateProvider
         .state('index', {
@@ -34,19 +34,19 @@ angular.module('arete', [
         })
         .state('index.home', {
             url: '/home',
-            templateUrl: 'js/home/partials/indHome.html',
-            controller: 'indMainCtrl'
+            templateUrl: 'js/home/partials/hmHome.html',
+            controller: 'hmHomeCtrl'
         });
 
 }]).
     run(['$rootScope', function($rootScope){
         'use strict';
 
-        $rootScope.$on('$routeChangeStart', function(event, next) {
-            var requireLogin = next.requireLogin === undefined || next.requireLogin;
-            if (requireLogin && !cmnAuthenticationSvc.isAuthenticated()) {
-                $state.go('login');
-                event.preventDefault();
-            }
-        });
+        //$rootScope.$on('$routeChangeStart', function(event, next) {
+        //    var requireLogin = next.requireLogin === undefined || next.requireLogin;
+        //    if (requireLogin && !cmnAuthenticationSvc.isAuthenticated()) {
+        //        $state.go('login');
+        //        event.preventDefault();
+        //    }
+        //});
     }]);
