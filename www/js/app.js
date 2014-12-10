@@ -5,9 +5,10 @@ angular.module('arete.controllers', []);
 
 angular.module('arete', [
     'ionic',
-    'ngCookies',
-    'ngCordova',
     'pascalprecht.translate',
+    'ngStorage',
+    'ngCordova',
+    'ionic',
     'arete.filters',
     'arete.services',
     'arete.directives',
@@ -27,17 +28,25 @@ angular.module('arete', [
     $stateProvider
         .state('index', {
             url: '/index',
-            templateUrl: 'js/index/partials/indMenu.html',
-            controller: 'indMainCtrl',
+            templateUrl: 'js/common/partials/cmnMenu.html',
+            controller: 'cmnMenuCtrl',
             abstract: true
         })
         .state('index.home', {
             url: '/home',
-            templateUrl: 'js/index/partials/indHome.html',
+            templateUrl: 'js/home/partials/indHome.html',
             controller: 'indMainCtrl'
         });
 
 }]).
     run(['$rootScope', function($rootScope){
         'use strict';
+
+        $rootScope.$on('$routeChangeStart', function(event, next) {
+            var requireLogin = next.requireLogin === undefined || next.requireLogin;
+            if (requireLogin && !cmnAuthenticationSvc.isAuthenticated()) {
+                $state.go('login');
+                event.preventDefault();
+            }
+        });
     }]);

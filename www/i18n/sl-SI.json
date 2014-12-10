@@ -16,5 +16,11 @@
             "ENGLISH": "angleško",
             "SLOVENIAN": "slovensko"
         }
+    },
+    "home": {
+        "TITLE": "Workout"
+    },
+    "sideMenu": {
+        "TITLE": "Meni"
     }
 }

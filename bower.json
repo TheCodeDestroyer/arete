@@ -20,7 +20,9 @@
     "angular-translate": "~2.5.0",
     "angular-translate-storage-local": "~2.5.0",
     "angular-translate-storage-cookie": "~2.5.0",
-    "angular-translate-loader-static-files": "~2.5.0"
+    "angular-translate-loader-static-files": "~2.5.0",
+    "ngStorage": "~0.2.0",
+    "jsSHA": "~1.5.0"
   },
   "resolutions": {
     "ionic": "v1.0.0-beta.13",

@@ -25,5 +25,11 @@
             "ENGLISH": "English",
             "SLOVENIAN": "Slovenian"
         }
+    },
+    "home": {
+        "TITLE": "Workout planer"
+    },
+    "sideMenu": {
+        "TITLE": "Menu"
     }
 }

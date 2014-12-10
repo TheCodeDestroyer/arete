@@ -1,0 +1,4 @@
+/* prevent the Angular html template from being briefly displayed */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+	display: none !important;
+}
