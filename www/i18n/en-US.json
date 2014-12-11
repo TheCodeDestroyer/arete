@@ -26,10 +26,19 @@
             "SLOVENIAN": "Slovenian"
         }
     },
+    "mainMenu":{
+        "PREMIUM": "Premium",
+        "SETTINGS": "Settings"
+    },
     "home": {
-        "TITLE": "Workout planer"
+        "TITLE": "Menu",
+        "menu":{
+            "START_WORKOUT": "Start Workout",
+            "NEW_WORKOUT": "New Workout",
+            "SCHEDULE": "Schedule"
+        }
     },
     "sideMenu": {
-        "TITLE": "Menu"
+        "TITLE": "Main menu"
     }
 }

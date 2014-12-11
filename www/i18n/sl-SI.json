@@ -17,10 +17,19 @@
             "SLOVENIAN": "slovensko"
         }
     },
+    "mainMenu":{
+        "PREMIUM": "Premium",
+        "SETTINGS": "Settings"
+    },
     "home": {
-        "TITLE": "Workout"
+        "TITLE": "Meni",
+        "menu":{
+            "START_WORKOUT": "Start Workout",
+            "NEW_WORKOUT": "New Workout",
+            "SCHEDULE": "Schedule"
+        }
     },
     "sideMenu": {
-        "TITLE": "Meni"
+        "TITLE": "Glavni Meni"
     }
 }
