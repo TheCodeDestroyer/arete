@@ -17,8 +17,9 @@
         </ion-header-bar>
         <ion-content>
             <div class="list ba-list">
-                <a menu-close ng-repeat="menuItem in menuItems" class="item" ui-sref="{{ menuItem.state }}">
-                    {{ menuItem.displayName }}
+                <a menu-close ng-repeat="menuItem in menuItems" class="item item-icon-left" ui-sref="{{ menuItem.state }}">
+                    <i class="icon {{ menuItem.icon }}"></i>
+                    {{ menuItem.displayName | translate }}
                 </a>
             </div>
         </ion-content>
