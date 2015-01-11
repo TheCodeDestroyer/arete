@@ -6,10 +6,9 @@ angular.module('arete.controllers', []);
 angular.module('arete', [
     'ionic',
     'pascalprecht.translate',
-    'angularLocalStorage',
+    'ngStorage',
     'ngCordova',
-    'ionic',
-    'angular-lodash',
+    'ngCookies',
     'arete.filters',
     'arete.services',
     'arete.directives',
@@ -23,6 +22,16 @@ angular.module('arete', [
         prefix: 'i18n/',
         suffix: '.json'
     });
+
+    persistence.debug = false;
+    persistence.store.cordovasql.config(
+        persistence,
+        'Arete',
+        '0.0.5',
+        'Arete',
+        50 * 1024 * 1024,
+        0
+    );
 
     $urlRouterProvider.otherwise('/index/home');
 
