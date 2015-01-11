@@ -8,7 +8,4 @@ angular.module('arete.controllers').controller('cmnMenuCtrl', ['$scope', '$ionic
         { displayName: 'mainMenu.SETTINGS', state: 'index.home', icon: 'ion-settings' }
     ];
 
-    vm.toggleLeft = function() {
-        $ionicSideMenuDelegate.toggleLeft();
-    };
 }]);
