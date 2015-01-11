@@ -1,4 +1,4 @@
-angular.module('arete.services').service('cmnSettingsSvc',['$localStorage', function ($localStorage) {
+angular.module('arete.services').service('cmnSettingsSvc', function ($localStorage) {
 
     function get() {
         if (!$localStorage.userSettings) {
@@ -24,4 +24,4 @@ angular.module('arete.services').service('cmnSettingsSvc',['$localStorage', func
         get: get,
         save: save
     };
-}]);
+});

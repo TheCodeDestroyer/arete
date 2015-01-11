@@ -1,4 +1,4 @@
-angular.module('arete.controllers').controller('cmnMenuCtrl', ['$scope', '$ionicSideMenuDelegate', '$translate', function($ionicSideMenuDelegate, $translate) {
+angular.module('arete.controllers').controller('cmnMenuCtrl', function() {
     'use strict';
 
     var vm = this;
@@ -8,4 +8,4 @@ angular.module('arete.controllers').controller('cmnMenuCtrl', ['$scope', '$ionic
         { displayName: 'mainMenu.SETTINGS', state: 'index.home', icon: 'ion-settings' }
     ];
 
-}]);
+});

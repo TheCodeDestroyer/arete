@@ -1,4 +1,4 @@
-angular.module('arete.controllers').controller('hmHomeCtrl', ['$scope', '$translate', function($translate) {
+angular.module('arete.controllers').controller('hmHomeCtrl', function() {
     'use strict';
 
     var vm = this;
@@ -9,4 +9,4 @@ angular.module('arete.controllers').controller('hmHomeCtrl', ['$scope', '$transl
         { displayName: 'home.menu.SCHEDULE', state: 'index.schedule', icon: 'ion-calendar' }
     ];
 
-}]);
+});

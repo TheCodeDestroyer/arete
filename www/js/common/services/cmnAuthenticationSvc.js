@@ -1,4 +1,4 @@
-angular.module('arete.services').factory('cmnAuthenticationSvc', ['$http', 'cmnSessionSvc', 'cmnSettingsSvc', function($http, cmnSessionSvc, cmnSettingsSvc){
+angular.module('arete.services').factory('cmnAuthenticationSvc', function($http, cmnSessionSvc, cmnSettingsSvc){
     'use strict';
 
     function login(credentials) {
@@ -30,4 +30,4 @@ angular.module('arete.services').factory('cmnAuthenticationSvc', ['$http', 'cmnS
         logout: logout,
         isAuthenticated: isAuthenticated
     };
-}]);
+});
