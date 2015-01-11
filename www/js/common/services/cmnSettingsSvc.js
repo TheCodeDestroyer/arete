@@ -11,7 +11,7 @@ angular.module('arete.services').service('cmnSettingsSvc', function ($localStora
     function prepareDefaultSettings() {
         $localStorage.$default({
             userSettings: {
-                apiUrl: 'http://arete-api.herokuapp.com/'
+                apiUrl: 'http://arete-api.herokuapp.com/api/'
             }
         });
     }
