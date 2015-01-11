@@ -9,6 +9,7 @@ angular.module('arete', [
     'angularLocalStorage',
     'ngCordova',
     'ionic',
+    'angular-lodash',
     'arete.filters',
     'arete.services',
     'arete.directives',
