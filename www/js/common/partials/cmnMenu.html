@@ -5,7 +5,7 @@
             </ion-nav-back-button>
         </ion-nav-bar>
         <ion-nav-buttons side="left">
-            <button ng-hide="$exposeAside.active" class="button button-icon button-clear ion-navicon" ng-click="toggleLeft()">
+            <button ng-hide="$exposeAside.active" class="button button-icon button-clear ion-navicon" ng-click="cmnMenu.toggleLeft()">
             </button>
         </ion-nav-buttons>
         <ion-nav-view animation="no-animation" name="content"></ion-nav-view>
@@ -17,7 +17,7 @@
         </ion-header-bar>
         <ion-content>
             <div class="list ba-list">
-                <a menu-close ng-repeat="menuItem in menuItems" class="item item-icon-left" ui-sref="{{ menuItem.state }}">
+                <a menu-close ng-repeat="menuItem in cmnMenu.menuItems" class="item item-icon-left" ui-sref="{{ menuItem.state }}">
                     <i class="icon {{ menuItem.icon }}"></i>
                     {{ menuItem.displayName | translate }}
                 </a>

@@ -1,12 +1,14 @@
-angular.module('arete.controllers').controller('cmnMenuCtrl', ['$scope', '$ionicSideMenuDelegate', '$translate', function($scope, $ionicSideMenuDelegate, $translate) {
+angular.module('arete.controllers').controller('cmnMenuCtrl', ['$scope', '$ionicSideMenuDelegate', '$translate', function($ionicSideMenuDelegate, $translate) {
     'use strict';
 
-    $scope.menuItems = [
+    var vm = this;
+
+    vm.menuItems = [
         { displayName: 'mainMenu.PREMIUM', state: 'index.home', icon: 'ion-person-add' },
         { displayName: 'mainMenu.SETTINGS', state: 'index.home', icon: 'ion-settings' }
     ];
 
-    $scope.toggleLeft = function() {
+    vm.toggleLeft = function() {
         $ionicSideMenuDelegate.toggleLeft();
     };
 }]);

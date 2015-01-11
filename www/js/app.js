@@ -29,7 +29,7 @@ angular.module('arete', [
         .state('index', {
             url: '/index',
             templateUrl: 'js/common/partials/cmnMenu.html',
-            controller: 'cmnMenuCtrl',
+            controller: 'cmnMenuCtrl as cmnMenu',
             abstract: true
         })
         .state('index.home', {
@@ -37,7 +37,7 @@ angular.module('arete', [
             views: {
                 "content": {
                     templateUrl: 'js/home/partials/hmHome.html',
-                    controller: 'hmHomeCtrl'
+                    controller: 'hmHomeCtrl as hmHome'
                 }
             }});
 
