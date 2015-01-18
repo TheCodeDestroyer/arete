@@ -134,6 +134,8 @@ platforms/
 plugins/
 
 # OTHER
-platforms/android/*
-node_modules/*
-www/lib/*
+platforms/
+node_modules/
+www/lib/
+build/
+*.annotated.js
