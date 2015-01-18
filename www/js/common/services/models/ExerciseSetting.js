@@ -14,5 +14,4 @@ angular.module('arete.services').factory('ExerciseSetting', function(cmnSettings
     model.enableSync(apiUrl + modelUri);
 
     return model;
-
 });

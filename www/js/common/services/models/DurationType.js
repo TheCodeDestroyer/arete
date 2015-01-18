@@ -14,5 +14,4 @@ angular.module('arete.services').factory('DurationType', function(cmnSettingsSvc
     model.enableSync(apiUrl + modelUri);
 
     return model;
-
 });

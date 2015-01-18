@@ -14,5 +14,4 @@ angular.module('arete.services').factory('Workout', function(cmnSettingsSvc) {
     model.enableSync(apiUrl + modelUri);
 
     return model;
-
 });

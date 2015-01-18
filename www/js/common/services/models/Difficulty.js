@@ -11,9 +11,7 @@ angular.module('arete.services').factory('Difficulty', function(cmnSettingsSvc) 
         name: 'TEXT'
     });
 
-
     model.enableSync(apiUrl + modelUri);
 
     return model;
-
 });
