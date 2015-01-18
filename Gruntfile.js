@@ -17,21 +17,7 @@ module.exports = function(grunt) {
                     'www/js/**/*.js'
                 ],
                 options: {
-                    bitwise: true,
-                    camelcase: true,
-                    curly: true,
-                    quotmark: 'single',
-                    regexp: true,
-                    undef: true,
-                    unused: true,
-                    eqeqeq: true,
-                    eqnull: true,
-                    browser: true,
-                    globals: {
-                        jQuery: true,
-                        angular: true,
-                        module: true
-                    }
+                    jshintrc: true
                 }
             }
         },
