@@ -63,4 +63,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-ngmin');
 
+
+    grunt.registerTask('test', ['jshint']);
 };
