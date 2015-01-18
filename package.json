@@ -29,6 +29,8 @@
     "grunt-bumpup": "~0.6.2",
     "semver": "~4.2.0",
     "moment": "~2.9.0",
-    "grunt-sass": "~0.17.0"
+    "grunt-sass": "~0.17.0",
+    "karma": "~0.12.31",
+    "karma-cli": "0.0.4"
   }
 }
