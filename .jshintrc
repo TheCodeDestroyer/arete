@@ -86,6 +86,8 @@
         "_": true,
         "module": true,
         "require": true,
+        "inject": true,
+        "expect": true,
         "persistence": true
     }
 }

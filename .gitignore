@@ -137,6 +137,9 @@ plugins/
 platforms/
 node_modules/
 www/lib/
+www/temp/
+www/test/coverage/
+www/test/report/
 build/
 *.annotated.js
 *.log
