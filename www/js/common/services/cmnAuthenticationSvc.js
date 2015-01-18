@@ -1,4 +1,4 @@
-angular.module('arete.services').factory('cmnAuthenticationSvc', function($http, cmnSessionSvc, cmnSettingsSvc){
+angular.module('arete.services').factory('cmnAuthenticationSvc', function($http, Session, cmnSettingsSvc){
     'use strict';
 
     function login(credentials) {
@@ -13,16 +13,16 @@ angular.module('arete.services').factory('cmnAuthenticationSvc', function($http,
         return $http.post(apiUrl + '/login', credentials)
             .then(function (response) {
                 var userData = response.data;
-                cmnSessionSvc.create(userData.accountId, userData.username, userData.sessionId );
+                Session.create(userData.accountId, userData.username, userData.sessionId );
             });
     }
 
     function logout() {
-        cmnSessionSvc.destroy();
+        Session.destroy();
     }
 
     function isAuthenticated () {
-        return !!cmnSessionSvc.sessionId;
+        return !!Session.sessionId;
     }
 
     return {
