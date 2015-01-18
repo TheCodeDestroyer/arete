@@ -1,0 +1,10 @@
+<ion-view title="{{ 'home.TITLE' | translate }}">
+    <ion-content has-bouncing="false">
+        <div class="list card">
+            <a ng-repeat="menuItem in hmHome.menuItems" ui-sref="{{ menuItem.state }}" class="item item-icon-left">
+                <i class="icon {{ menuItem.icon }}"></i>
+                {{ menuItem.displayName | translate }}
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

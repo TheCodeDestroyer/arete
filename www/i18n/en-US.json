@@ -25,5 +25,20 @@
             "ENGLISH": "English",
             "SLOVENIAN": "Slovenian"
         }
+    },
+    "mainMenu":{
+        "PREMIUM": "Premium",
+        "SETTINGS": "Settings"
+    },
+    "home": {
+        "TITLE": "Menu",
+        "menu":{
+            "START_WORKOUT": "Start Workout",
+            "NEW_WORKOUT": "New Workout",
+            "SCHEDULE": "Schedule"
+        }
+    },
+    "sideMenu": {
+        "TITLE": "Main menu"
     }
 }
