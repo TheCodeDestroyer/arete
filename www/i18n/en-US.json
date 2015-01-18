@@ -38,6 +38,9 @@
             "SCHEDULE": "Schedule"
         }
     },
+    "workout": {
+      "TITLE": "Workout"
+    },
     "sideMenu": {
         "TITLE": "Main menu"
     }

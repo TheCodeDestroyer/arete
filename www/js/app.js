@@ -49,7 +49,18 @@ angular.module('arete', [
                     templateUrl: 'js/home/partials/hmHome.html',
                     controller: 'hmHomeCtrl as hmHome'
                 }
-            }});
+            }
+        })
+
+        .state('index.workout', {
+            url: '/workout/:id',
+            views: {
+                'content': {
+                    templateUrl: 'js/workout/partials/wrkDetail.html',
+                    controller: 'wrkDetailCtrl as wrkDetail'
+                }
+            }
+        });
 
 }]).
     run(['$rootScope', function() {//$rootScope){
