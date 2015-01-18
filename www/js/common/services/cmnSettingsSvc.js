@@ -1,4 +1,5 @@
 angular.module('arete.services').service('cmnSettingsSvc', function ($localStorage) {
+    'use strict';
 
     function get() {
         if (!$localStorage.userSettings) {

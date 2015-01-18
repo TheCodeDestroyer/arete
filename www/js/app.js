@@ -45,14 +45,14 @@ angular.module('arete', [
         .state('index.home', {
             url: '/home',
             views: {
-                "content": {
+                'content': {
                     templateUrl: 'js/home/partials/hmHome.html',
                     controller: 'hmHomeCtrl as hmHome'
                 }
             }});
 
 }]).
-    run(['$rootScope', function($rootScope){
+    run(['$rootScope', function() {//$rootScope){
         'use strict';
 
         //$rootScope.$on('$routeChangeStart', function(event, next) {
