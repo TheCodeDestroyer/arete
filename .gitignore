@@ -139,3 +139,10 @@ node_modules/
 www/lib/
 build/
 *.annotated.js
+*.log
+
+
+
+
+
+
