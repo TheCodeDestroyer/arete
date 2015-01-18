@@ -39,6 +39,7 @@
     "karma-chai": "~0.1.0",
     "karma-mocha-reporter": "~0.3.1",
     "grunt-karma": "~0.10.1",
-    "karma-phantomjs-launcher": "~0.1.4"
+    "karma-phantomjs-launcher": "~0.1.4",
+    "grunt-karma-coveralls": "~2.5.3"
   }
 }

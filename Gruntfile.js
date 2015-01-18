@@ -25,6 +25,11 @@ module.exports = function(grunt) {
                 configFile: 'karma.conf.js'
             }
         },
+        coveralls: {
+            options: {
+                coverageDir: 'www/test/coverage/'
+            }
+        },
         watch: {
             files: ['Gruntfile.js',
                 'www/js/**/*.js'
@@ -292,7 +297,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-phonegap');
     grunt.loadNpmTasks('grunt-bumpup');
+
     grunt.loadNpmTasks('grunt-karma');
+    grunt.loadNpmTasks('grunt-karma-coveralls');
 
     grunt.registerTask('test', ['jshint', 'karma']);
     grunt.registerTask('build', [
