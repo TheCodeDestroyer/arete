@@ -6,6 +6,9 @@
     "type": "git",
     "url": "https://github.com/TheCodeDestroyer/arete.git"
   },
+  "scripts": {
+    "test": "grunt test"
+  },
   "author": "The Code Destroyer <the.code.destroyer@gmail.com>",
   "bugs": {
     "url": "https://github.com/TheCodeDestroyer/arete/issues"
@@ -18,7 +21,13 @@
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-uglify": "^0.4.0",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-ngmin": "0.0.3",
-    "phonegap": "^3.5.0-0.20.4"
+    "phonegap": "^3.5.0-0.20.4",
+    "grunt-ng-annotate": "~0.8.0",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-copy": "~0.7.0",
+    "grunt-phonegap": "~0.15.2",
+    "grunt-bumpup": "~0.6.2",
+    "semver": "~4.2.0",
+    "moment": "~2.9.0"
   }
 }
