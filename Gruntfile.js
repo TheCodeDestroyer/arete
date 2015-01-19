@@ -6,7 +6,7 @@ module.exports = function(grunt) {
         sass: {
             compile: {
                 files: {
-                    'public/css/bootstrap.css': 'public/css/bootstrap/bootstrap.scss'
+                    'www/css/overrides.css': 'www/css/overrides.scss'
                 }
             }
         },

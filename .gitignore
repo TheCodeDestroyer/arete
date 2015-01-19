@@ -143,9 +143,4 @@ www/test/report/
 build/
 *.annotated.js
 *.log
-
-
-
-
-
-
+*.css
