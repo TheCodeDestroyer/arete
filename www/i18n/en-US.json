@@ -39,7 +39,10 @@
         }
     },
     "workout": {
-      "TITLE": "Workout"
+        "TITLE": "Workout",
+        "placeholders":{
+            "DAY_SELECT": "Select a day"
+        }
     },
     "sideMenu": {
         "TITLE": "Main menu"

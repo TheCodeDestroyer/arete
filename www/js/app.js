@@ -18,11 +18,11 @@ angular.module('arete', [
     'use strict';
 
     $translateProvider.useLocalStorage();
-    $translateProvider.preferredLanguage('en-US');
     $translateProvider.useStaticFilesLoader({
         prefix: 'i18n/',
         suffix: '.json'
     });
+    $translateProvider.preferredLanguage('en-US');
 
     persistence.debug = false;
     persistence.store.cordovasql.config(

@@ -1,17 +1,20 @@
 <ion-view title="{{ 'workout.TITLE' | translate }}">
     <ion-content has-bouncing="false">
         <div class="list">
-            <label class="item item-input item-stacked-label">
+            <label class="item item-input">
                 <span class="input-label">Name</span>
-                <input type="text" placeholder="Workout name">
+                <input ng-model="wrkDetail.workout.name" type="text" placeholder="Workout name">
             </label>
-            <label class="item item-input item-stacked-label">
+            <label class="item item-input">
                 <span class="input-label">Time</span>
-                <input type="text" placeholder="Time">
+                <timepicker class="ionic-input-reset" ng-model="wrkDetail.workout.time" hour-step="1" minute-step="1" show-meridian="true"></timepicker>
             </label>
-            <label class="item item-input item-stacked-label">
-                <span class="input-label">Date/Day</span>
-                <input type="text" placeholder="Date/Day">
+            <label class="item item-input item-select">
+                <span class="input-label">Day</span>
+                <select ng-model="wrkDetail.selectedDay">
+                    <option translate value="">workout.placeholders.DAY_SELECT</option>
+                    <option ng-repeat="day in wrkDetail.days" value="{{ day.id }}" translate>{{ day.label }}</option>
+                </select>
             </label>
         </div>
     </ion-content>
