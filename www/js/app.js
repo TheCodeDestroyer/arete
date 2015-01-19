@@ -9,6 +9,7 @@ angular.module('arete', [
     'ngStorage',
     'ngCordova',
     'ngCookies',
+    'ui.bootstrap',
     'arete.filters',
     'arete.services',
     'arete.directives',
