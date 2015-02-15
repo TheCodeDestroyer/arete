@@ -1,40 +1,42 @@
 <ion-view title="{{ 'workout.TITLE' | translate }}">
     <ion-nav-buttons side="right">
-        <button class="button button-icon icon ion-checkmark" ng-click="wrkDetail.saveWorkout()">
+        <button class="button button-icon icon ion-checkmark" ng-click="wrkDetail.saveWorkout(wrkDetail.workout)">
         </button>
     </ion-nav-buttons>
     <ion-content has-bouncing="false">
-        <div class="list">
-            <label class="item item-input">
-                <span class="input-label">Name</span>
-                <input ng-model="wrkDetail.workout.name" type="text" placeholder="Workout name">
-            </label>
-            <label class="item item-input ionic-input-reset">
-                <span class="input-label">Time</span>
-                <timepicker ng-model="wrkDetail.workout.time" hour-step="1" minute-step="1" show-meridian="false"></timepicker>
-            </label>
-            <label class="item item-toggle">
-                <span translate>Repeat</span>
-                <label class="toggle toggle-positive">
-                    <input ng-model="wrkDetail.workout.repeat" type="checkbox">
-                    <div class="track">
-                        <div class="handle"></div>
+        <form name="workoutForm" novalidate>
+            <div class="list">
+                <label class="item item-input">
+                    <span class="input-label">Name</span>
+                    <input ng-model="wrkDetail.workout.name" type="text" placeholder="Workout name" required>
+                </label>
+                <label class="item item-input ionic-input-reset">
+                    <span class="input-label">Time</span>
+                    <timepicker ng-model="wrkDetail.workout.time" hour-step="1" minute-step="1" show-meridian="false"></timepicker>
+                </label>
+                <label class="item item-toggle">
+                    <span translate>Repeat</span>
+                    <label class="toggle toggle-positive">
+                        <input ng-model="wrkDetail.workout.repeat" type="checkbox">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </label>
+                <label ng-show="wrkDetail.workout.repeat" class="item item-input item-select">
+                    <span class="input-label">Repeat type</span>
+                    <select ng-model="wrkDetail.workout.selectedRepeatType">
+                        <option ng-repeat="repeat in ::wrkDetail.repeatList" value="{{ ::repeat.id }}" translate>{{ ::repeat.label }}</option>
+                    </select>
+                </label>
+                <label ng-show="wrkDetail.showWeeklyLabel()" class="item">
+                    <div class="btn-group">
+                        <label ng-repeat="day in ::wrkDetail.days" class="btn btn-primary" ng-model="wrkDetail.workout.daysInWeek[day.id]" btn-checkbox translate>
+                            {{ day.label }}
+                        </label>
                     </div>
                 </label>
-            </label>
-            <label ng-show="wrkDetail.workout.repeat" class="item item-input item-select">
-                <span class="input-label">Repeat type</span>
-                <select ng-model="wrkDetail.selectedRepeatType">
-                    <option ng-repeat="repeat in ::wrkDetail.repeatList" value="{{ ::repeat.id }}" translate>{{ ::repeat.label }}</option>
-                </select>
-            </label>
-            <label ng-show="wrkDetail.showWeeklyLabel()" class="item">
-                <div class="btn-group">
-                    <label ng-repeat="day in ::wrkDetail.days" class="btn btn-primary" ng-model="wrkDetail.daysInWeek[day.id]" btn-checkbox translate>
-                        {{ day.label }}
-                    </label>
-                </div>
-            </label>
-        </div>
+            </div>
+        </form>
     </ion-content>
 </ion-view>
