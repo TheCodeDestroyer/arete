@@ -1,3 +1,5 @@
 <div class="padding-top">
-    <progress value="{{ syncCounter }}" max="{{ totalTables }}"></progress>
+    <progressbar value="syncLog.syncCounter" max="syncLog.totalTables">
+        <span>{{syncLog.syncCounter}} / {{syncLog.totalTables}}</span>
+    </progressbar>
 </div>

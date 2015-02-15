@@ -1,4 +1,4 @@
-angular.module('arete.services').factory('cmnSyncSvc', function($rootScope, $translate, $ionicPopup, AllModels){
+angular.module('arete.services').factory('cmnSyncSvc', function($q, $rootScope, $translate, $ionicPopup, AllModels){
     'use strict';
 
     //TODO: Clean this up a bit, maybe create a progress bar directive and implement proper translations
@@ -6,10 +6,11 @@ angular.module('arete.services').factory('cmnSyncSvc', function($rootScope, $tra
         entities = AllModels.modelsForSync,
         syncLogPopup,
         syncCounter = 0;
+    $scope.syncLog = {};
 
-    function sync(success, cancel) {
-
-        var title = 'SYNC',
+    function sync() {
+        var deferred = $q.defer(),
+         title = 'SYNC',
             template = 'SYNC?',
             confirmPopup = $ionicPopup.confirm({
                 title: title,
@@ -18,30 +19,37 @@ angular.module('arete.services').factory('cmnSyncSvc', function($rootScope, $tra
 
         confirmPopup.then(function(res) {
             if(res) {
-                showSyncLog();
-                syncData(function (){
-                    syncLogPopup.close();
-                    success();
+                syncData().then(function (){
+                    //syncLogPopup.close();
+                    deferred.resolve({ canceled: false });
                 }, function(){
-                    syncLogPopup.close();
+                    //syncLogPopup.close();
                     showSyncError();
+                    deferred.resolve({ canceled: false });
                 });
             } else {
-                cancel();
+                deferred.resolve({ canceled: true });
             }
         });
+
+        return deferred.promise;
     }
 
 
-    function syncData(callback, errorCallback) {
+    function syncData() {
+        var deferred = $q.defer();
+
         syncCounter = 0;
         updateSyncLog(entities.length, syncCounter+1);
+        showSyncLog();
         persistence.schemaSync();
 
-        syncProgress(callback, errorCallback);
+        syncProgress(deferred);
+
+        return deferred.promise;
     }
 
-    function syncProgress(callback, errorCallback) {
+    function syncProgress(deferred) {
 
         var entity = entities[syncCounter];
 
@@ -49,16 +57,16 @@ angular.module('arete.services').factory('cmnSyncSvc', function($rootScope, $tra
             function () {
                 syncCounter++;
                 if(syncCounter === entities.length){
-                    callback();
+                    deferred.resolve();
                 }
                 else {
                     updateSyncLog(entities.length, syncCounter+1);
-                    syncProgress(callback, errorCallback);
+                    syncProgress(deferred);
                 }
             },
             function () {
                 resetDb();
-                errorCallback();
+                deferred.reject();
             }
         );
     }
@@ -80,8 +88,9 @@ angular.module('arete.services').factory('cmnSyncSvc', function($rootScope, $tra
     }
 
     function showSyncLog(){
-        var title = 'SYNCHRONISING',
-            subTitle = 'PLEASE_WAIT';
+        //TODO: Think about how to resolve stupid translation promises
+        var title = 'sync.TITLE',
+            subTitle = 'general.PLEASE_WAIT';
         syncLogPopup = $ionicPopup.show({
             templateUrl: 'js/common/partials/cmnSyncLog.html',
             title: title + ' <i class="icon ion-loading-a"></i>',
@@ -91,8 +100,8 @@ angular.module('arete.services').factory('cmnSyncSvc', function($rootScope, $tra
     }
 
     function updateSyncLog(totalTables, syncCounter){
-        $scope.totalTables = totalTables;
-        $scope.syncCounter = syncCounter;
+        $scope.syncLog.totalTables = totalTables;
+        $scope.syncLog.syncCounter = syncCounter;
         if(!$scope.$$phase) {
             $scope.$digest();
         }

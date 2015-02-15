@@ -1,35 +1,39 @@
 ﻿{
-    "general":
-    {
-        "OK": "OK",
-        "CANCEL": "Prekliči",
-        "BACK": "Nazaj",
-        "SELECT": "Select",
-        "ADD": "Dodaj",
-        "NEW": "Now",
-        "OPEN": "Odpri",
-        "SEARCH": "Išči",
-        "CLEAR": "Zbriši",
-        "ERROR_TITLE": "Napaka",
-        "ERROR_MESSAGE": "Zgodila se je napaka. Prosim kontaktiraj tehnično pomoč.",
-        "languages":{
-            "ENGLISH": "angleško",
-            "SLOVENIAN": "slovensko"
-        }
-    },
-    "mainMenu":{
-        "PREMIUM": "Premium",
-        "SETTINGS": "Settings"
-    },
-    "home": {
-        "TITLE": "Meni",
-        "menu":{
-            "START_WORKOUT": "Start Workout",
-            "NEW_WORKOUT": "New Workout",
-            "SCHEDULE": "Schedule"
-        }
-    },
-    "sideMenu": {
-        "TITLE": "Glavni Meni"
+  "general":
+  {
+    "OK": "OK",
+    "CANCEL": "Prekliči",
+    "BACK": "Nazaj",
+    "SELECT": "Select",
+    "ADD": "Dodaj",
+    "NEW": "Now",
+    "OPEN": "Odpri",
+    "SEARCH": "Išči",
+    "CLEAR": "Zbriši",
+    "ERROR_TITLE": "Napaka",
+    "ERROR_MESSAGE": "Zgodila se je napaka. Prosim kontaktiraj tehnično pomoč.",
+    "PLEASE_WAIT": "Please wait...",
+    "languages":{
+      "ENGLISH": "angleško",
+      "SLOVENIAN": "slovensko"
     }
+  },
+  "mainMenu":{
+    "PREMIUM": "Premium",
+    "SETTINGS": "Settings"
+  },
+  "home": {
+    "TITLE": "Meni",
+    "menu":{
+      "START_WORKOUT": "Start Workout",
+      "NEW_WORKOUT": "New Workout",
+      "SCHEDULE": "Schedule"
+    }
+  },
+  "sideMenu": {
+    "TITLE": "Glavni Meni"
+  },
+  "sync": {
+    "TITLE": "Synchronising"
+  }
 }
