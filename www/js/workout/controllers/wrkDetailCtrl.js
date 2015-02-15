@@ -1,4 +1,4 @@
-angular.module('arete.controllers').controller('wrkDetailCtrl', function ($q, $scope, $translate, $stateParams, Workout) {
+angular.module('arete.controllers').controller('wrkDetailCtrl', function ($q, $scope, $translate, $stateParams, cmnIonicHelpersSvc, Workout) {
     'use strict';
 
     var vm = this;
@@ -32,17 +32,31 @@ angular.module('arete.controllers').controller('wrkDetailCtrl', function ($q, $s
     };
 
     vm.saveWorkout = function (workoutModel) {
-        saveEntity(workoutModel).then(function() {
+        saveEntity(workoutModel).then(function(newEntity) {
             //notify and redirect or some other shit
+
+            if (newEntity) {
+                var confirmPopup = cmnIonicHelpersSvc.confirm('Exrecises', 'Would like to add exercises to this workout');
+                confirmPopup.then(function (res) {
+                    if (res) {
+                        console.log('');
+                    }
+                });
+            }
+            else {
+                console.log('');
+            }
+
         });
     };
 
     function saveEntity(workoutModel) {
         var deferred = $q.defer(),
          workout,
-            repeatDaysArray = [];
+            repeatDaysArray = [],
+            newEntity = vm.workout.id !== undefined;
 
-        if (vm.workout.id) {
+        if (newEntity) {
             workout = new Workout();
         }
         else {
@@ -77,7 +91,7 @@ angular.module('arete.controllers').controller('wrkDetailCtrl', function ($q, $s
         }
 
         persistence.flush(function() {
-            deferred.resolve();
+            deferred.resolve(newEntity);
         });
 
         return deferred.promise;
