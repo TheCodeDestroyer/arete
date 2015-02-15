@@ -83,5 +83,4 @@ angular.module('arete.controllers').controller('wrkDetailCtrl', function ($q, $s
         return deferred.promise;
     }
 
-
 });
