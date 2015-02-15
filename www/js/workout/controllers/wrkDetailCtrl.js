@@ -1,4 +1,4 @@
-angular.module('arete.controllers').controller('wrkDetailCtrl', function ($scope, $translate, $stateParams, Workout) {
+angular.module('arete.controllers').controller('wrkDetailCtrl', function ($q, $scope, $translate, $stateParams, Workout) {
     'use strict';
 
     var vm = this;
@@ -12,8 +12,6 @@ angular.module('arete.controllers').controller('wrkDetailCtrl', function ($scope
         //{ id: 3, label: 'general.repeat.MONTHLY' } TODO: Not supported for now
     ];
     vm.workout.selectedRepeatType = _.first(vm.repeatList).id;
-
-
 
     for (var i = 1; i < 8; i++) {
         var day = { id: i, label: 'general.days.' + i };
@@ -34,7 +32,14 @@ angular.module('arete.controllers').controller('wrkDetailCtrl', function ($scope
     };
 
     vm.saveWorkout = function (workoutModel) {
-        var workout,
+        saveEntity(workoutModel).then(function() {
+            //notify and redirect or some other shit
+        });
+    };
+
+    function saveEntity(workoutModel) {
+        var deferred = $q.defer(),
+         workout,
             repeatDaysArray = [];
 
         if (vm.workout.id) {
@@ -71,6 +76,12 @@ angular.module('arete.controllers').controller('wrkDetailCtrl', function ($scope
             workout.repeatedDays = repeatDaysArray;
         }
 
-    };
+        persistence.flush(function() {
+            deferred.resolve();
+        });
+
+        return deferred.promise;
+    }
+
 
 });
