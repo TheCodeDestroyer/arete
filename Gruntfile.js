@@ -266,10 +266,8 @@ module.exports = function(grunt) {
                 // of the platforms specified above, include these options.
                 // See https://build.phonegap.com/
                 remote: {
-//                    username: process.env['PGB_USERNAME'],
-                    username: '',
-//                    password: process.env['PGB_PASSWORD'],
-                    password: '',
+                    username: process.env.PGB_USERNAME,
+                    password: process.env.PGB_PASSWORD,
                     platforms: []
 //                    platforms: ['android', 'blackberry', 'ios', 'symbian', 'webos', 'wp7']
                 },
