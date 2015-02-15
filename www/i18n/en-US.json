@@ -1,50 +1,55 @@
 ﻿{
-    "general":
-    {
-        "OK": "OK",
-        "CANCEL": "Cancel",
-        "BACK": "Back",
-        "SELECT": "Select",
-        "ADD": "Add",
-        "NEW": "New",
-        "OPEN": "Open",
-        "SEARCH": "Search",
-        "CLEAR": "Clear",
-        "ERROR_TITLE": "Error",
-        "ERROR_MESSAGE": "There was an error. Please contact technical support.",
-        "days":{
-            "1":"Monday",
-            "2":"Tuesday",
-            "3":"Wednesday",
-            "4":"Thursday",
-            "5":"Friday",
-            "6":"Saturday",
-            "7":"Sunday"
-        },
-        "languages":{
-            "ENGLISH": "English",
-            "SLOVENIAN": "Slovenian"
-        }
+  "general":
+  {
+    "OK": "OK",
+    "CANCEL": "Cancel",
+    "BACK": "Back",
+    "SELECT": "Select",
+    "ADD": "Add",
+    "NEW": "New",
+    "OPEN": "Open",
+    "SEARCH": "Search",
+    "CLEAR": "Clear",
+    "ERROR_TITLE": "Error",
+    "ERROR_MESSAGE": "There was an error. Please contact technical support.",
+    "days":{
+      "1":"Monday",
+      "2":"Tuesday",
+      "3":"Wednesday",
+      "4":"Thursday",
+      "5":"Friday",
+      "6":"Saturday",
+      "7":"Sunday"
     },
-    "mainMenu":{
-        "PREMIUM": "Premium",
-        "SETTINGS": "Settings"
+    "repeat": {
+      "DAILY": "Daily",
+      "WEEKLY": "Weekly",
+      "MONTHLY": "Monthly"
     },
-    "home": {
-        "TITLE": "Menu",
-        "menu":{
-            "START_WORKOUT": "Start Workout",
-            "NEW_WORKOUT": "New Workout",
-            "SCHEDULE": "Schedule"
-        }
-    },
-    "workout": {
-        "TITLE": "Workout",
-        "placeholders":{
-            "DAY_SELECT": "Select a day"
-        }
-    },
-    "sideMenu": {
-        "TITLE": "Main menu"
+    "languages":{
+      "ENGLISH": "English",
+      "SLOVENIAN": "Slovenian"
     }
+  },
+  "mainMenu":{
+    "PREMIUM": "Premium",
+    "SETTINGS": "Settings"
+  },
+  "home": {
+    "TITLE": "Menu",
+    "menu":{
+      "START_WORKOUT": "Start Workout",
+      "NEW_WORKOUT": "New Workout",
+      "SCHEDULE": "Schedule"
+    }
+  },
+  "workout": {
+    "TITLE": "Workout",
+    "placeholders":{
+      "DAY_SELECT": "Select a day"
+    }
+  },
+  "sideMenu": {
+    "TITLE": "Main menu"
+  }
 }
